@@ -3,7 +3,8 @@
 Theme colors defined by Upenn Web style guide
 https://home.www.upenn.edu/about/styleguide
 */
-
+@import url('https://fonts.googleapis.com/css?family=Gentium+Basic&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 :root {
   --theme-textfont: 'Open Sans',serif;
   --theme-blue-primary: #01256e;
@@ -15,11 +16,13 @@ https://home.www.upenn.edu/about/styleguide
 
 }
 
+/* "Gentium Basic",serif */
 
 
 body {
     padding-top: 60px;
     padding-bottom: 60px;
+    font-family: var(--theme-textfont);
 }
 
 .copyright {
@@ -34,13 +37,25 @@ body {
     color: var(--theme-blue-lightest);
 }
 
-.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:hover, .navbar-inverse .navbar-nav>.active>a:focus {
+.navbar {
+  font-family: "Gentium Basic",serif;
+
+}
+.navbar-inverse .navbar-nav>.active>a{
     color: #fff;
     background-color: var(--theme-blue-darkest);
+    text-transform: uppercase;
+    font-family: var(--theme-textfont);
+}
+ .navbar-inverse .navbar-nav>.active>a:hover, .navbar-inverse .navbar-nav>.active>a:focus {
+   color:var(--theme-yellow-primary);
+   background-color: var(--theme-blue-darkest);
 }
 
 .navbar-inverse .navbar-brand {
     color: var(--theme-blue-lightest);
+    font-size: 24px;
+
 }
 
 
