@@ -1,3 +1,22 @@
+
+/*
+Theme colors defined by Upenn Web style guide
+https://home.www.upenn.edu/about/styleguide
+*/
+
+:root {
+  --theme-textfont: 'Open Sans',serif;
+  --theme-blue-primary: #01256e;
+  --theme-blue-darkest: #000f3a;
+  --theme-blue-lightest: #82afd3;
+  --theme-red-primary: #95001a;
+  --theme-yellow-primary: #f2c100;
+  --theme-orange-primary: #c35a00;
+
+}
+
+
+
 body {
     padding-top: 60px;
     padding-bottom: 60px;
@@ -12,11 +31,27 @@ body {
 }
 
 .footer a {
-    color: #ee4444;
+    color: var(--theme-blue-lightest);
+}
+
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:hover, .navbar-inverse .navbar-nav>.active>a:focus {
+    color: #fff;
+    background-color: var(--theme-blue-darkest);
+}
+
+.navbar-inverse .navbar-brand {
+    color: var(--theme-blue-lightest);
+}
+
+
+
+.navbar-inverse {
+  background-color: var(--theme-blue-darkest);
+  border-color: var(--theme-blue-primary);
 }
 
 .sidebar h1 {
-    color: #ee4444;
+    color: var(--theme-blue-primary);
     font-size: 1.3em;
 }
 
@@ -38,14 +73,14 @@ body {
 }
 
 .well h1 {
-    color: #ee4444;
+    color: var(--theme-blue-primary);
     font-size: 1.3em;
 }
 
 .author {
-    color: #ee4444;
+    color: var(--theme-blue-primary);
 }
 
 .author a {
-    color: #ee4444;
+    color: var(--theme-blue-primary);
 }
