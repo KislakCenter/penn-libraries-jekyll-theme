@@ -1,3 +1,10 @@
+Penn Libraries Jekyll Theme
+============
+
+* Get it from [github](https://github.com/demery/penn-libraries-jekyll-theme).
+* See the [live demo](https://demery.github.io/penn-libraries-jekyll-theme).
+
+
 Jekyll Clean
 ============
 
