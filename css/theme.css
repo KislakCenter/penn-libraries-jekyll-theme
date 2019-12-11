@@ -70,8 +70,8 @@ body {
     font-size: 1.3em;
 }
 
-.sidebar a {
-    color: #428bca;
+.sidebar a, a {
+    color: #3273B8;
 }
 
 .sidebar li {
