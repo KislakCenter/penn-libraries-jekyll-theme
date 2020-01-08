@@ -1,6 +1,9 @@
 ---
 layout: default
 ---
+<!-- HTML elements for search -->
+<input type="text" id="search-input" placeholder="Search blog posts..">
+<ul id="results-container"></ul>
 
 <!-- Script pointing to search-script.js -->
 <script src="/path/to/search-script.js" type="text/javascript"></script>
@@ -8,7 +11,7 @@ layout: default
 
 <!-- Configuration -->
 <script>
-SimpleJekyllSearch({
+var sjs = SimpleJekyllSearch({
   searchInput: document.getElementById('search-input'),
   resultsContainer: document.getElementById('results-container'),
   json: '/search.json',
