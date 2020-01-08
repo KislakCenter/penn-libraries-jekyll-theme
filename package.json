@@ -1,0 +1,23 @@
+{
+  "name": "penn-libraries-jekyll-theme",
+  "version": "1.0.0",
+  "description": "Penn Libraries Jekyll Theme ============",
+  "main": "index.js",
+  "dependencies": {
+    "simple-jekyll-search": "^1.7.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/demery/penn-libraries-jekyll-theme.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/demery/penn-libraries-jekyll-theme/issues"
+  },
+  "homepage": "https://github.com/demery/penn-libraries-jekyll-theme#readme"
+}
