@@ -37,4 +37,4 @@ highlighter: rouge
 markdown: kramdown
 gems: ['jekyll-paginate']
 
-exclude: ['README.md', 'LICENSE', 'node_modules']
+exclude: ['README.md', 'LICENSE', '/node_modules']
