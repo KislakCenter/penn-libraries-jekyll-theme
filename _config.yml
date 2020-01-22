@@ -4,7 +4,7 @@ name: Penn Libraries Jekyll Theme
 description: Theme for U. Penn Libraries
 
 # url is currently only used only for the RSS feed in feed.xml
-url: https://demery.github.io/penn-libraries-jekyll-theme
+url: https://KislakCenter.github.io/penn-libraries-jekyll-theme
 
 # baseurl will often be '', but for a project page on gh-pages, it needs to
 # be the project name.
