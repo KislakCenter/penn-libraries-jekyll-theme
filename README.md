@@ -1,7 +1,7 @@
 Penn Libraries Jekyll Theme
 ============
 
-* Get it from [github](https://github.com/demery/penn-libraries-jekyll-theme).
+* Get it from [github](https://github.com/KislakCenter/penn-libraries-jekyll-theme).
 * See the [live demo](https://kislakcenter.github.io/penn-libraries-jekyll-theme/).
 
 A simple and clean Jekyll theme for Penn Libraries using [bootstrap](http://getbootstrap.com)
