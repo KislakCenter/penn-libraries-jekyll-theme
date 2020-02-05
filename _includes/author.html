@@ -1,0 +1,9 @@
+<div class='author-header'>
+  <h1>About the author</h1><br>
+</div>
+<div class='author-container'>
+  {% if author.pic %}
+    <img class="author-img" src="{{ site.baseurl }}/{{ author.pic }}" alt="{{ author.name }}" style="max-width:300px;max-height:200px;float:left;margin-right:15px;" />
+  {% endif %}
+  {{ author.bio }}<br>
+</div>
