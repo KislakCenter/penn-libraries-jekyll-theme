@@ -1,4 +1,23 @@
-{% include header.html %}
+---
+layout: page
+show_title: false
+---
+
+{% assign author = site.data.authors[page.author] %}
+
+
+{% if author %}
+  Posted {{ page.date | date: "%b %-d, %Y"}} by {{ author.name }}
+{% else %}
+  Posted {{ page.date | date: "%b %-d, %Y"}}
+{% endif %}
+
+<br>
+<br>
+
+{{ content }}
+
+<!--{% include header.html %}
 
 <div class="container container-left">
     <div class="row">
@@ -44,4 +63,4 @@
 </div>
 
 {% include disqus-comments.html %}
-{% include footer.html %}
+{% include footer.html %} --!>
