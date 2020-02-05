@@ -16,6 +16,12 @@ baseurl: /penn-libraries-jekyll-theme
 github: 'KislakCenter/penn-libraries-jekyll-theme'
 gitlab: ''
 
+header_pages:
+  - links.html
+  - archive.html
+  - about.html
+  - feed.xml
+  - search.html
 # Set this to your UA-# value, or '' to disable the block completely
 gaaccount: ''
 

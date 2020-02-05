@@ -15,6 +15,18 @@
 
 <body>
 
+{% if site.header_pages %}
+ {% assign header_pages = "" | split:"|"  %}
+ {% for path in site.header_pages %}
+   {% assign header_page = site.pages | where: "path", path | first %}
+   {% if header_page %}
+     {% assign header_pages = header_pages | push: header_page %}
+   {% endif %}
+ {% endfor %}
+{% else %}
+ {% assign header_pages = site.pages %}
+{% endif %}
+
 <div class="container-fluid">
     <div class="row-fluid">
         <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -30,17 +42,20 @@
               <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="{{ site.baseurl }}/">Home</a></li>
-                    <li class="active visible-xs-block"><a href="{{ site.baseurl }}/links.html">Links</a></li>
-                    <li class="active"><a href="{{ site.baseurl }}/archive.html">Archive</a></li>
-                    <li class="active"><a href="{{ site.baseurl }}/about.html">About</a></li>
-                    <li class="active"><a href="{{ site.baseurl }}/feed.xml">RSS</a></li>
-                    <li class="active"><a href="{{ site.baseurl }}/search.html">Search</a></li>
+                    {% for page in header_pages %}
+                      {% if page.title %}
+                        <li class="active"><a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title | escape }}</a></li>
+                      {% endif %}
+                    {% endfor %}
+                    <!-- START GITHUB GITLAB links -->
+                    <!-- Remove thse lines to remove github/gitlab URL from header -->
                     {% if site.gitlab != '' %}
                       <li class="active"><a href="https://gitlab.com/{{ site.gitlab }}">Gitlab</a></li>
                     {% endif %}
                     {% if site.github != '' %}
                       <li class="active"><a href="https://github.com/{{ site.github }}">Github</a></li>
                     {% endif %}
+                    <!-- END GITHUB GITLAB links -->
                 </ul>
               </div>
         </div>
