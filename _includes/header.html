@@ -15,23 +15,8 @@
 
 <body>
 
-{% comment %}
-Inspect site.header_pages for configured head links.
-{% endcomment %}
-{% if site.header_pages %}
- {% assign header_pages = "" | split:"|"  %}
- {% for path in site.header_pages %}
-   {% assign header_page = site.pages | where: "path", path | first %}
-   {% if header_page %}
-     {% assign header_pages = header_pages | push: header_page %}
-   {% endif %}
- {% endfor %}
-{% else %}
-{% comment %}
-Otherwise, create a link for all the site.pages.
-{% endcomment %}
-  {% assign header_pages = site.pages %}
-{% endif %}
+
+
 
 <div class="container-fluid">
     <div class="row-fluid">
@@ -48,14 +33,14 @@ Otherwise, create a link for all the site.pages.
               <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="{{ site.baseurl }}/">Home</a></li>
-                    {% for page in header_pages %}
-                    {% comment %}
-                    NOTE: Page must have 'title:' defined in header to be added to header.
-                    {% endcomment %}
-                      {% if page.title %}
-                        <li class="active"><a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title | escape }}</a></li>
-                      {% endif %}
-                    {% endfor %}
+                    {% if site.header_pages %}
+                      {% for path in site.header_pages %}
+                        {% assign page = site.pages | where: 'path', path | first %}
+                        {% if page.title %}
+                          <li class="active"><a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title | escape }}</a></li>
+                        {% endif %}
+                      {% endfor %}
+                    {% endif %}
                     <!-- START GITHUB GITLAB links -->
                     <!-- Remove thse lines to remove github/gitlab URL from header -->
                     {% if site.gitlab != '' %}
