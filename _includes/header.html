@@ -34,8 +34,9 @@
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="{{ site.baseurl }}/">Home</a></li>
                     {% if site.header_pages %}
-                      {% for path in site.header_pages %}
-                        {% assign page = site.pages | where: 'path', path | first %}
+                      {% for header_path in site.header_pages %}
+                        <!-- Assign to the page variable the first page from site.pages where page.path == header_path. -->
+                        {% assign page = site.pages | where: 'path', header_path | first %}
                         {% if page.title %}
                           <li class="active"><a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title | escape }}</a></li>
                         {% endif %}
@@ -43,10 +44,10 @@
                     {% endif %}
                     <!-- START GITHUB GITLAB links -->
                     <!-- Remove thse lines to remove github/gitlab URL from header -->
-                    {% if site.gitlab != '' %}
+                    {% if site.gitlab %}
                       <li class="active"><a href="https://gitlab.com/{{ site.gitlab }}">Gitlab</a></li>
                     {% endif %}
-                    {% if site.github != '' %}
+                    {% if site.github %}
                       <li class="active"><a href="https://github.com/{{ site.github }}">Github</a></li>
                     {% endif %}
                     <!-- END GITHUB GITLAB links -->

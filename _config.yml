@@ -14,7 +14,7 @@ baseurl: /penn-libraries-jekyll-theme
 
 # These can be '' to hide the Github or Gitlab nav buttons
 github: 'KislakCenter/penn-libraries-jekyll-theme'
-gitlab: ''
+gitlab:
 
 header_pages:
   - links.html
