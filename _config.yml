@@ -22,6 +22,7 @@ header_pages:
   - about.html
   - feed.xml
   - search.html
+  - resources.html
 # Set this to your UA-# value, or '' to disable the block completely
 gaaccount: ''
 
