@@ -2,6 +2,7 @@
 layout: post
 title: "Lorem ipsum dolor sit amet"
 date: 2014-07-22 16:25:06 -0700
+author: sample_author
 comments: true
 ---
 

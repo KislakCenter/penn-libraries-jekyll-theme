@@ -24,10 +24,6 @@ show_title: false
 
 {{ content }}
 
-{% if author %}
-  {% include author.html %}
-{% endif %}
-
 {% if page.comments %}
   {% if site.disqus != '' %}
       <div id="disqus_thread">
@@ -46,6 +42,11 @@ show_title: false
       <a class="btn btn-default" href="{{ site.baseurl}}{{ page.previous.url }}" class="previous">Older Post</a>
     {% endif %}
 </div>
+
+{% if author %}
+  {% include author.html %}
+{% endif %}
+
 
 {% include disqus-comments.html %}
 {% include footer.html %}
