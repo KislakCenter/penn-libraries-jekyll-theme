@@ -35,11 +35,16 @@
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="{{ site.baseurl }}/">Home</a></li>
                     {% if site.header_pages %}
-                      {% for header_path in site.header_pages %}
+                      {% for header in site.header_pages %}
                         <!-- Assign to the page variable the first page from site.pages where page.path == header_path. -->
-                        {% assign page = site.pages | where: 'path', header_path | first %}
-                        {% if page.title %}
-                          <li class="active"><a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title | escape }}</a></li>
+                        {% assign page = site.pages | where: 'path', header.path | first %}
+                        {% if header.title %}
+                          {% assign header_title = header.title %}
+                        {% else %}
+                          {% assign header_title = page.title %}
+                        {% endif %}
+                        {% if header_title %}
+                          <li class="active"><a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ header_title | escape }}</a></li>
                         {% endif %}
                       {% endfor %}
                     {% endif %}

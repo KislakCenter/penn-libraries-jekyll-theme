@@ -16,12 +16,26 @@ baseurl: /penn-libraries-jekyll-theme
 github: 'KislakCenter/penn-libraries-jekyll-theme'
 gitlab:
 
+# Define the pages to appear as links in the navigation bar in
+# the order given below. Each header has a `path` [required]
+# and `title` [optional].
+#
+# Use `title` to override the title defined in the page's
+# YAML header.
+#
+# NOTE: If no `title` is given in this list or the page's YAML header,
+# the link will not appear in the navigation bar.
 header_pages:
-  - links.html
-  - archive.html
-  - about.html
-  - feed.xml
-  - search.html
+  - path: links.html
+    title: Links
+  - path: archive.html
+    title: Archive
+  - path: about.html
+    title: About
+  - path: feed.xml
+    title: RSS
+  - path: search.html
+    title: Search
 # Set this to your UA-# value, or '' to disable the block completely
 gaaccount: ''
 
