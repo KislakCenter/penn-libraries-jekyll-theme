@@ -4,7 +4,7 @@
   "description": "Penn Libraries Jekyll Theme ============",
   "main": "index.js",
   "dependencies": {
-    "simple-jekyll-search": "^1.7.3"
+    "simple-jekyll-search": "^1.7.7"
   },
   "devDependencies": {},
   "scripts": {
